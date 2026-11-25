@@ -1,0 +1,20 @@
+# MySQL local para estudar sem EasyPanel.
+# Suba com:  docker compose up -d
+# As credenciais abaixo são SÓ para uso local (não use em servidor).
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: bookhub-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: bookhub
+      MYSQL_USER: bookhub
+      MYSQL_PASSWORD: bookhub123
+    ports:
+      - "3306:3306"
+    volumes:
+      - bookhub-data:/var/lib/mysql
+
+volumes:
+  bookhub-data:

@@ -1,0 +1,37 @@
+{
+  "name": "bookhub-backend",
+  "version": "1.0.0",
+  "description": "API de biblioteca BookHub (aula DevHub) - Node.js, Express e MySQL",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "db:schema": "node database/run-sql.js database/schema.sql",
+    "db:seed": "node database/run-sql.js database/seed.sql"
+  },
+  "keywords": [
+    "express",
+    "mysql",
+    "jwt",
+    "aula"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^18.0.10",
+    "express": "^4.22.3",
+    "jsonwebtoken": "^9.0.3",
+    "mysql2": "^3.24.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cfcontabilidadeBrito/backend-bookhub.git"
+  },
+  "author": "CF Contabilidade Brito"
+}
